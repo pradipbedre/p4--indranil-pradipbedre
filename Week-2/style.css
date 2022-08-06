@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  top: 200px;
+}
+
+.Container h1 {
+  position: relative;
+  top: 210px;
+  font-size: 50px;
+}
+
+.Box1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  background-color: red;
+  transition: transform 1s ease;
+  transform-origin: top left;
+  transform: rotate(0deg);
+}
+
+.Container:hover .Box1 {
+  transform-origin: top left;
+  transform: rotate(90deg);
+}
+
+.Box2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 250px;
+  background-color: yellow;
+  transition: transform 1s ease;
+  transform-origin: top right;
+  transform: rotate(0deg);
+}
+
+.Container:hover .Box2 {
+  transform-origin: top right;
+  transform: rotate(-90deg);
+}
+
+.Box3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  background-color: blue;
+  transition: transform 1s ease;
+  transform-origin: bottom left;
+  transform: rotate(0deg);
+}
+
+.Container:hover .Box3 {
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
+}
+
+.Box4 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  height: 250px;
+  background-color: green;
+  transition: transform 1s ease;
+  transform-origin: bottom right;
+  transform: rotate(0deg);
+}
+
+.Container:hover .Box4 {
+  transform-origin: bottom right;
+  transform: rotate(90deg);
+}/*# sourceMappingURL=style.css.map */
