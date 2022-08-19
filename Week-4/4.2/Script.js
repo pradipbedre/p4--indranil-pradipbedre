@@ -12,6 +12,7 @@ class Teacher extends Person{
 }
 
 
+
 var him=new Teacher();
 
 him.initialize("Adam",45);

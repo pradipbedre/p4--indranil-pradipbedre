@@ -1,75 +1,68 @@
-/* So right now we have to implement custom promise */
-
-/* Firstly we have to declear 3 state of promise  */
-const PRNDING = 0;
-const FULLFILED = 1;
+const PENDING = 0;
+const FULFILLED = 1;
 const REJECTED = 2;
 
-function customPromise(executor) {
-  let state = PRNDING; // st staring state of promiss is pending
-  let value = null;
+function customePromise(executor) {
+  var state = PENDING;
+  var value = undefined;
+  var handlers = [];
+  var catchers = [];
 
-  /* Now we have to define callback functions   */
-  let handlers = []; // this for handling call back functions
-  let cachers = []; // this for error
-
-  function resolve(result) {
-    if (state !== PRNDING) {
+  resolve = (value) => {
+    if (state !== PENDING) {
       return;
     }
-
-    state = FULLFILED;
-    value = result;
+    state = FULFILLED;
+    value = value;
 
     handlers.forEach((h) => h(value));
-  }
+  };
 
-  function reject(err) {
-    if (state !== PRNDING) {
+  reject = (error) => {
+    if (state !== PENDING) {
       return;
     }
+
     state = REJECTED;
-    value = err;
-    cachers.forEach((c) => c(value));
-  }
+    value = error;
 
-  this.then = function (sucesscallback) {
-    if (state === FULLFILED) {
-      sucesscallback(value);
+    catchers.forEach((c) => c(value));
+  };
+
+  this.then = (scb) => {
+    if (state === FULFILLED) {
+      scb(value);
     } else {
-      handlers.push(sucesscallback);
+      handlers.push(scb);
     }
-  }
+  };
 
-  this.catch = function (failureCallback) {
+  this.catch = (fcb) => {
     if (state === REJECTED) {
-      failureCallback(value);
+      fcb(value);
     } else {
-      cachers.push(failureCallback);
+      catchers.push(fcb);
     }
-  }
-
+  };
   executor(resolve, reject);
 }
 
 function getNumber() {
-  let x = parseInt(Math.random() * 100);
-  return x;
+  let num = Math.floor(Math.random() * 100 + 1);
+  return num;
 }
-
-const customPromiseObject = new customPromise(function (resolve, reject) {
-  let num = getNumber();
- 
-  if ((num/5) == 0) {
-    reject();
+const myObj = new customePromise((res, rej) => {
+  if (getNumber() % 5 == 0) {
+    rej();
   } else {
-    resolve();
+    res();
   }
 });
 
-customPromiseObject.then((val) => {
-  console.log("Promiss Resolve sucessfully ", val)
-})
-customPromiseObject.catch((val) => {
-  console.log("Promise Rejected.... ! ", val)
+myObj.then((val) => {
+  console.log("number is not divisible by 5 so resolve");
+});
+
+myObj.catch((val) => {
+  console.log("Number is divisible by 5 so rejected");
 });
