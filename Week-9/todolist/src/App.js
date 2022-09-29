@@ -4,7 +4,7 @@ import ToDo from './components/ToDo.jsx';
 import UpdateForm from './components/UpdateForm.jsx';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-function App() {
+export default function App() {
 
   // task todo list state / main state to store tasks 
   const [toDo, setToDo] = useState([
@@ -79,7 +79,6 @@ function App() {
           changeTask={changeTask}
           updateTask={updateTask}
           cancleUpdate={cancleUpdate}
-
         />
       ) : (
         <AddtaskForm
@@ -102,5 +101,4 @@ function App() {
     </div>
   )
 }
-
-export default App;
+ 
