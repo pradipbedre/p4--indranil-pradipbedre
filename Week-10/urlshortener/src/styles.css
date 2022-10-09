@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(145, 144, 145);
+}
+/* Nav bar styling  */
+
+.navbar {
+  background-color: rgb(32, 25, 25);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.navbar ul {
+  color: white;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+
+  list-style: none;
+}
+.navbar ul,
+li,
+a {
+  text-decoration: none;
+  font-size: 2vw;
+  color: white;
+  height: 100%;
+  padding: 0.1rem;
+}
+
+.content {
+  margin: 1rem;
+  text-align: center;
+}
+
+.navbar li:hover {
+  background-color: rgb(171, 157, 183);
+}
+
+.site-title {
+  font-size: 3vw;
+  text-decoration: none;
+}
+
+/* URL shortener component style  */
+.input-container {
+  margin-top: 10vh;
+}
+
+.input-container h1 {
+  font-size: 50px;
+  color: rgb(14, 11, 7);
+}
+.input-container span {
+  color: rgb(255, 221, 0);
+}
+
+.input-container input {
+  padding: 10px;
+  width: 50vw;
+  border: none;
+}
+
+.input-container button {
+  padding: 10px;
+  border: none;
+  margin-left: 1px;
+  background-color: rgb(255, 221, 0);
+  cursor: pointer;
+}
+
+/* Short The Link component design */
+.copy-shor-url {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-shor-url p {
+  margin-right: 15px;
+  padding: 8px;
+  border: 1px solid rgb(29, 16, 16);
+  color: white;
+}
+.copy-shor-url button {
+  padding: 10px;
+  border: none;
+  margin-left: 1px;
+  background-color: rgb(255, 221, 0);
+  cursor: pointer;
+}
+
+/* List Url componet design  */
+.url-list-title {
+  margin-top: 3vh;
+  margin-bottom: -30px;
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+.listItems {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+}
+.listItems p {
+  margin-right: 15px;
+  padding: 8px;
+  border: 1px solid rgb(29, 16, 16);
+  color: white;
+}
+.item button {
+  height: 38px;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: rgb(255, 221, 0);
+  border: none;
+}
+
+/* All to all css  */
+button:hover {
+  background-color: rgb(202, 187, 87);
+}
