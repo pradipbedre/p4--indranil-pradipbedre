@@ -1,0 +1,70 @@
+create database warehouse;
+
+use warehouse;
+
+create table cities(
+	city varchar(20),
+	state varchar(20)
+);
+
+insert into cities values("pune", "maharashtra");
+insert into cities values("mumbai", "maharashtra");
+insert into cities values("hydrabad", "maharashtra");
+insert into cities values("nanded", "maharashtra");
+insert into cities values("loha", "maharashtra");
+insert into cities values("khandar", "maharashtra");
+
+create table warehouses(
+	wid integer,
+	wname varchar(20),
+	location_city varchar(20)
+);
+
+insert into warehouses values(10, "warehouse1", "pune");
+insert into warehouses values(20, "warehouse2", "mumbai");
+insert into warehouses values(30, "warehouse3", "hydrabad");
+insert into warehouses values(40, "warehouse4", "nanded");
+
+create table store(
+	sid integer,
+	storename varchar(20),
+	location_city varchar(20)
+);
+
+insert into store values(401, "store1", "nanded");
+insert into store values(420, "store2", "pune");
+insert into store values(403, "store3", "mumbai");
+
+create table customer(
+	cno integer,
+	cname varchar(30),
+	cu_add varchar(100),
+    cu_city varchar(20)
+);
+insert into customer values(30, "pradip bedre","kalewadi pune", "pune");
+insert into customer values(31, "som bedre","bandra mumbai", "mumbaai");
+insert into customer values(33, "bhaskar", "loha nanded","nanded");
+insert into customer values(34, "samu khemu", "khandar nanded","nanded");
+
+create table orders(
+	ono integer,
+	odate date
+);
+
+insert into orders values(22, 12/23/2022);
+insert into orders values(23, 11/23/2022);
+insert into orders values(24, 10/23/2022);
+insert into orders values(25, 12/21/2022);
+
+create table items(
+	item_no integer,
+	decription varchar(200),
+	weight decimal(5,2),
+    cost decimal(5,2)
+);
+
+insert into items values(210, 'JHFASJDSDSA',12.4, 86.98);
+insert into items values(220, 'JSHDGSAJKDH',23.4, 76.3);
+insert into items values(230, 'SAKJDGAJSHD',55.6, 66.0);
+insert into items values(240, 'YASGUDFDASY', 66.7,7.8);
+
