@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App With Backend</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+    .container {
+      text-align: center;
+    }
+    .container h2 {
+      color: red;
+    }
+    .container h1 {
+      text-decoration: underline;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 200px;
+    }
+    .form2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+      margin-left: 70px;
+      width: 100px;
+      padding: 10px;
+      background-color: rgb(190, 124, 42);
+    }
+    button:hover {
+      background-color: beige;
+    }
+    input {
+      padding: 5px;
+    }
+    label {
+      font-size: 20px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Weather App</h1>
+      <h2>City Wise and Date Wise Weather Data</h2>
+      <div class="form1">
+        <form method="post">
+          <label for="form1-city">Enter City:</label>
+          <input type="text" name="cityName" id="form1-city" /><br /><br />
+          <button type="submit">GO</button>
+        </form>
+      </div>
+      <h2>Detailed Forcast For Next 1 to 16 days</h2>
+      <div class="form2">
+        <form method="post">
+          <label for="form2-date">Enter Days:</label>
+          <input type="number" name="cityName2" id="form2-date" /><br /><br />
+          <label for="form2-city">Enter City:</label>
+          <input type="text" id="form2-city" name="dayCount"/><br /><br />
+          <button type="submit">GO</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
