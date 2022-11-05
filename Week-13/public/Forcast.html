@@ -31,7 +31,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 100px;
+      margin-bottom: 200px;
     }
     .form2 {
       display: flex;
@@ -53,24 +53,20 @@
     label {
       font-size: 20px;
     }
-    .btn {
-      width: 200px;
-    }
   </style>
   <body>
     <div class="container">
       <h1>Weather App</h1>
-      <h2>City Wise and Date Wise Weather Data</h2>
-      <div class="form1">
+      <h2>Detailed Forcast For Next 1 to 16 days</h2>
+      <div class="form2">
         <form method="post">
-          <label for="form1-city">Enter City:</label>
-          <input type="text" name="cityName" id="form1-city" /><br /><br />
+          <label for="form2-date">Enter Days:</label>
+          <input type="number" name="dayCount" id="form2-date" /><br /><br />
+          <label for="form2-city">Enter City:</label>
+          <input type="text" id="form2-city" name="cityName2" /><br /><br />
           <button type="submit">GO</button>
         </form>
       </div>
-      <a href="./Forcast.html"
-        ><button class="btn">Check Next X Day Forcast</button></a
-      >
     </div>
   </body>
 </html>
