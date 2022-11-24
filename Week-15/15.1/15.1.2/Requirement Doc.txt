@@ -1,0 +1,22 @@
+------------> Non Functional Requirement <--------
+low latency 
+highly available
+highly reliable
+Tweets created by users should never be lost
+security
+
+
+
+------------>Functional Requirement<--------------
+
+User should be able to tweet
+Timeline -> Home timeline , User timeline, Search timeline
+User should also be able to see trending hashtags and topic
+
+
+
+
+
+
+
+

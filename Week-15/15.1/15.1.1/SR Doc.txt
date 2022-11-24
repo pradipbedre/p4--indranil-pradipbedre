@@ -1,0 +1,54 @@
+---Requirements subscription-based sports website:--
+
+-----------HLD----------
+
+1. Functional Requirements:
+  - sign-in and sign-up
+  - User Management 
+  - payment gateway
+  - Monthly & Yearly subscription / pricing 
+  - List of games 
+  - Display All information of about game 
+  - Display scores of each game , Status, all hostory of game 
+
+
+2. Non functional Requirements 
+  - SSL certificate 
+  - Responsive Mobile & desktop
+  - Security
+  - Speed 
+  - Localization = Languages, Currencies, Time zones etc. 
+  - Simple UI
+  - SEO
+  - Caching 
+  - CI/CD
+  - B2C
+
+
+----Tech Stack----
+FrontEnd: React, Redux
+Server: Node js, MangoDb 
+Packages: Axios,tailwind css
+other: NPM 
+  
+
+--------LLD--------
+Protocols: 
+  - REST , Json
+
+Implementation:
+  - Infinte Scrroll 
+
+API:
+  - getSportsList()
+  - searchSport()
+  - viewSport()
+
+Data Modeling:
+  - URL
+  - Methods: get
+
+
+
+
+
